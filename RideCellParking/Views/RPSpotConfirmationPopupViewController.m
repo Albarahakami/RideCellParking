@@ -47,5 +47,15 @@
     
 }
 
+- (IBAction)getDirectionsClicked:(id)sender {
+    
+    [self.delegate dismissClicked];
+    
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://maps.apple.com/?q=%f,%f", _spot.lat, _spot.lng]];
+    [[UIApplication sharedApplication] openURL:url];
+    
+    
+    
+}
 
 @end

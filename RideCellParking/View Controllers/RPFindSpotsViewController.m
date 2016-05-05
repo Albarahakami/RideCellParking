@@ -11,6 +11,7 @@
 #import "RPSpotInfoViewController.h"
 #import "RPSpotConfirmationPopupViewController.h"
 #import "UIViewController+CWPopup.h"
+#import "ProgressHUD.h"
 #import "RPSpot.h"
 
 #define SEARCH_VIEW_VISIBLE_AREA_HIEGHT 25
@@ -62,6 +63,8 @@
 
 - (void) refreshResults {
     
+    [ProgressHUD show:@"Searching.."];
+    
     [_myMapView removeAnnotations:_myMapView.annotations];
     spots = [[NSMutableArray alloc] init];
     
@@ -70,6 +73,7 @@
                                         
 //                                        NSLog(@"%@", result);
                                         
+                                        [ProgressHUD dismiss];
                                         
                                         for (int i = 0; i < ((NSArray*)result).count; i++) {
                                             
@@ -96,6 +100,7 @@
                                     }
                                     failure:^(NSError *error) {
                                         
+                                        [ProgressHUD dismiss];
                                         NSLog(@"%@", error);
                                         
                                     }];
@@ -261,11 +266,12 @@ regionWillChangeAnimated:(BOOL)animated {
     
     [infoViewController.view setHidden:YES];
     
-    
     RPSpotConfirmationPopupViewController *confirmationViewController = [[RPSpotConfirmationPopupViewController alloc]
                                                                          initWithNibName:@"RPSpotConfirmationPopupViewController"
                                                                          bundle:nil];
     confirmationViewController.delegate = self;
+    
+    [confirmationViewController setSpot:spot];
     
     [self presentPopupViewController:confirmationViewController
                             animated:YES

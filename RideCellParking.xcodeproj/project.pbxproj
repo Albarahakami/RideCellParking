@@ -34,6 +34,8 @@
 		74F66ECE1CDB7B11004FC3D8 /* RPSpotConfirmationPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F66ECC1CDB7B11004FC3D8 /* RPSpotConfirmationPopupViewController.m */; };
 		74F66ECF1CDB7B11004FC3D8 /* RPSpotConfirmationPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74F66ECD1CDB7B11004FC3D8 /* RPSpotConfirmationPopupViewController.xib */; };
 		74F66ED21CDB832D004FC3D8 /* reservation_header.png in Resources */ = {isa = PBXBuildFile; fileRef = 74F66ED11CDB832D004FC3D8 /* reservation_header.png */; };
+		74F66ED71CDB8B98004FC3D8 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 74F66ED41CDB8B98004FC3D8 /* ProgressHUD.bundle */; };
+		74F66ED81CDB8B98004FC3D8 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F66ED61CDB8B98004FC3D8 /* ProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +79,9 @@
 		74F66ECC1CDB7B11004FC3D8 /* RPSpotConfirmationPopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPSpotConfirmationPopupViewController.m; sourceTree = "<group>"; };
 		74F66ECD1CDB7B11004FC3D8 /* RPSpotConfirmationPopupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RPSpotConfirmationPopupViewController.xib; sourceTree = "<group>"; };
 		74F66ED11CDB832D004FC3D8 /* reservation_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reservation_header.png; sourceTree = "<group>"; };
+		74F66ED41CDB8B98004FC3D8 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
+		74F66ED51CDB8B98004FC3D8 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
+		74F66ED61CDB8B98004FC3D8 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
 		94DE4B7A56F2ED5925A40FAD /* libPods-RideCellParking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RideCellParking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -239,6 +244,7 @@
 		74F66EC11CDB716C004FC3D8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				74F66ED31CDB8B98004FC3D8 /* ProgressHUD */,
 				74F66EC21CDB716C004FC3D8 /* CWPopup */,
 			);
 			path = Frameworks;
@@ -259,6 +265,16 @@
 				74F66ED11CDB832D004FC3D8 /* reservation_header.png */,
 			);
 			path = "Reservation View";
+			sourceTree = "<group>";
+		};
+		74F66ED31CDB8B98004FC3D8 /* ProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				74F66ED41CDB8B98004FC3D8 /* ProgressHUD.bundle */,
+				74F66ED51CDB8B98004FC3D8 /* ProgressHUD.h */,
+				74F66ED61CDB8B98004FC3D8 /* ProgressHUD.m */,
+			);
+			path = ProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,6 +339,7 @@
 			files = (
 				74F66ECA1CDB7247004FC3D8 /* RPSpotInfoViewController.xib in Resources */,
 				74F66ED21CDB832D004FC3D8 /* reservation_header.png in Resources */,
+				74F66ED71CDB8B98004FC3D8 /* ProgressHUD.bundle in Resources */,
 				74F66EBF1CDACC74004FC3D8 /* tab_bar_search_on@2x.png in Resources */,
 				74F66EB91CDACC74004FC3D8 /* find_spots_search_icon@2x.png in Resources */,
 				74F66EBA1CDACC74004FC3D8 /* tab_bar_profile_off@2x.png in Resources */,
@@ -398,6 +415,7 @@
 				74F66E9B1CDAB286004FC3D8 /* RPFindSpotsViewController.m in Sources */,
 				74F66EC91CDB7247004FC3D8 /* RPSpotInfoViewController.m in Sources */,
 				74F66E7E1CDA7344004FC3D8 /* RideCellParkingAPI.m in Sources */,
+				74F66ED81CDB8B98004FC3D8 /* ProgressHUD.m in Sources */,
 				74F66E641CDA5FA2004FC3D8 /* AppDelegate.m in Sources */,
 				74F66EA11CDAB2D6004FC3D8 /* RPProfileViewController.m in Sources */,
 				74F66EC51CDB716C004FC3D8 /* UIViewController+CWPopup.m in Sources */,
