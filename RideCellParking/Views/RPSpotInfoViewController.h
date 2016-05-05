@@ -10,7 +10,7 @@
 #import "RPSpot.h"
 
 
-@protocol SpotInfoPopupDelegate <NSObject>
+@protocol RPSpotInfoPopupDelegate <NSObject>
 
 - (void) payClickedForSpot:(RPSpot*)spot;
 - (void) infoClickedForSpot:(RPSpot*)spot;

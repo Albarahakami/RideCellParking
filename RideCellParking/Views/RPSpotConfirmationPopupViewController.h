@@ -12,8 +12,8 @@
 
 @protocol RPSpotConfirmationPopupDelegate <NSObject>
 
-- (void) payClickedForSpot:(RPSpot*)spot;
-- (void) infoClickedForSpot:(RPSpot*)spot;
+- (void) viewReservationClickedForSpot:(RPSpot*)spot;
+- (void) dismissClicked;
 
 @end
 

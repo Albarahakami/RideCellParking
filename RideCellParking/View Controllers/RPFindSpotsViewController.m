@@ -7,14 +7,15 @@
 //
 
 #import "RPFindSpotsViewController.h"
-#import "RideCellParkingTools.h"
 #import "RideCellParkingAPI.h"
 #import "RPSpotInfoViewController.h"
+#import "RPSpotConfirmationPopupViewController.h"
+#import "UIViewController+CWPopup.h"
 #import "RPSpot.h"
 
 #define SEARCH_VIEW_VISIBLE_AREA_HIEGHT 25
 
-@interface RPFindSpotsViewController () <SpotInfoPopupDelegate> {
+@interface RPFindSpotsViewController () <RPSpotInfoPopupDelegate, RPSpotConfirmationPopupDelegate> {
     
     
     RPSpotInfoViewController *infoViewController;
@@ -260,6 +261,16 @@ regionWillChangeAnimated:(BOOL)animated {
     
     [infoViewController.view setHidden:YES];
     
+    
+    RPSpotConfirmationPopupViewController *confirmationViewController = [[RPSpotConfirmationPopupViewController alloc]
+                                                                         initWithNibName:@"RPSpotConfirmationPopupViewController"
+                                                                         bundle:nil];
+    confirmationViewController.delegate = self;
+    
+    [self presentPopupViewController:confirmationViewController
+                            animated:YES
+                          completion:nil];
+    
 }
 
 - (void)infoClickedForSpot:(RPSpot *)spot {
@@ -268,5 +279,23 @@ regionWillChangeAnimated:(BOOL)animated {
     
 }
 
+
+#pragma mark RPSpotConfirmationPopupDelegate
+
+
+- (void)viewReservationClickedForSpot:(RPSpot *)spot {
+    
+    [self dismissPopupViewControllerAnimated:YES
+                                  completion:nil];
+    
+}
+
+
+- (void)dismissClicked {
+    
+    [self dismissPopupViewControllerAnimated:YES
+                                  completion:nil];
+    
+}
 
 @end

@@ -14,7 +14,6 @@
 		74F66E6F1CDA5FA2004FC3D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74F66E6E1CDA5FA2004FC3D8 /* Assets.xcassets */; };
 		74F66E721CDA5FA2004FC3D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74F66E701CDA5FA2004FC3D8 /* LaunchScreen.storyboard */; };
 		74F66E7E1CDA7344004FC3D8 /* RideCellParkingAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F66E7B1CDA7344004FC3D8 /* RideCellParkingAPI.m */; };
-		74F66E7F1CDA7344004FC3D8 /* RideCellParkingTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F66E7D1CDA7344004FC3D8 /* RideCellParkingTools.m */; };
 		74F66E871CDA7419004FC3D8 /* RPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F66E841CDA7419004FC3D8 /* RPUser.m */; };
 		74F66E961CDAB0EC004FC3D8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F66E951CDAB0EC004FC3D8 /* CoreLocation.framework */; };
 		74F66E981CDAB0F5004FC3D8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F66E971CDAB0F5004FC3D8 /* MapKit.framework */; };
@@ -49,8 +48,6 @@
 		74F66E731CDA5FA2004FC3D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74F66E7A1CDA7344004FC3D8 /* RideCellParkingAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RideCellParkingAPI.h; sourceTree = "<group>"; };
 		74F66E7B1CDA7344004FC3D8 /* RideCellParkingAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RideCellParkingAPI.m; sourceTree = "<group>"; };
-		74F66E7C1CDA7344004FC3D8 /* RideCellParkingTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RideCellParkingTools.h; sourceTree = "<group>"; };
-		74F66E7D1CDA7344004FC3D8 /* RideCellParkingTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RideCellParkingTools.m; sourceTree = "<group>"; };
 		74F66E831CDA7419004FC3D8 /* RPUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPUser.h; sourceTree = "<group>"; };
 		74F66E841CDA7419004FC3D8 /* RPUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPUser.m; sourceTree = "<group>"; };
 		74F66E951CDAB0EC004FC3D8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -165,8 +162,6 @@
 			children = (
 				74F66E7A1CDA7344004FC3D8 /* RideCellParkingAPI.h */,
 				74F66E7B1CDA7344004FC3D8 /* RideCellParkingAPI.m */,
-				74F66E7C1CDA7344004FC3D8 /* RideCellParkingTools.h */,
-				74F66E7D1CDA7344004FC3D8 /* RideCellParkingTools.m */,
 			);
 			path = RideCellParkingAPI;
 			sourceTree = "<group>";
@@ -392,7 +387,6 @@
 				74F66EC91CDB7247004FC3D8 /* RPSpotInfoViewController.m in Sources */,
 				74F66E7E1CDA7344004FC3D8 /* RideCellParkingAPI.m in Sources */,
 				74F66E641CDA5FA2004FC3D8 /* AppDelegate.m in Sources */,
-				74F66E7F1CDA7344004FC3D8 /* RideCellParkingTools.m in Sources */,
 				74F66EA11CDAB2D6004FC3D8 /* RPProfileViewController.m in Sources */,
 				74F66EC51CDB716C004FC3D8 /* UIViewController+CWPopup.m in Sources */,
 				74F66ECE1CDB7B11004FC3D8 /* RPSpotConfirmationPopupViewController.m in Sources */,

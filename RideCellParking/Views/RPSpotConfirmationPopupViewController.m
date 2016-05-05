@@ -25,11 +25,26 @@
 }
 
 
+- (void)setSpot:(RPSpot *)spot {
+    
+    _spot = spot;
+    
+    [_reservationInformationLabel setText:[NSString stringWithFormat:@"You've reserved %@", spot.name]];
+    
+}
+
+
 
 - (IBAction)viewReservationClicked:(id)sender {
+    
+    [self.delegate viewReservationClickedForSpot:_spot];
+    
 }
 
 - (IBAction)dismissClicked:(id)sender {
+    
+    [self.delegate dismissClicked];
+    
 }
 
 
