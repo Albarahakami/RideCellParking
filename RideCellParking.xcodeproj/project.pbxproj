@@ -1,0 +1,555 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5BE1CFC0EA48FCA3146FEE6E /* libPods-RideCellParking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94DE4B7A56F2ED5925A40FAD /* libPods-RideCellParking.a */; };
+		74F66E611CDA5FA2004FC3D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F66E601CDA5FA2004FC3D8 /* main.m */; };
+		74F66E641CDA5FA2004FC3D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F66E631CDA5FA2004FC3D8 /* AppDelegate.m */; };
+		74F66E6D1CDA5FA2004FC3D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74F66E6B1CDA5FA2004FC3D8 /* Main.storyboard */; };
+		74F66E6F1CDA5FA2004FC3D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74F66E6E1CDA5FA2004FC3D8 /* Assets.xcassets */; };
+		74F66E721CDA5FA2004FC3D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74F66E701CDA5FA2004FC3D8 /* LaunchScreen.storyboard */; };
+		74F66E7E1CDA7344004FC3D8 /* RideCellParkingAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F66E7B1CDA7344004FC3D8 /* RideCellParkingAPI.m */; };
+		74F66E7F1CDA7344004FC3D8 /* RideCellParkingTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F66E7D1CDA7344004FC3D8 /* RideCellParkingTools.m */; };
+		74F66E871CDA7419004FC3D8 /* RPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F66E841CDA7419004FC3D8 /* RPUser.m */; };
+		74F66E961CDAB0EC004FC3D8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F66E951CDAB0EC004FC3D8 /* CoreLocation.framework */; };
+		74F66E981CDAB0F5004FC3D8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F66E971CDAB0F5004FC3D8 /* MapKit.framework */; };
+		74F66E9B1CDAB286004FC3D8 /* RPFindSpotsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F66E9A1CDAB286004FC3D8 /* RPFindSpotsViewController.m */; };
+		74F66E9E1CDAB2C8004FC3D8 /* RPReservationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F66E9D1CDAB2C8004FC3D8 /* RPReservationsViewController.m */; };
+		74F66EA11CDAB2D6004FC3D8 /* RPProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F66EA01CDAB2D6004FC3D8 /* RPProfileViewController.m */; };
+		74F66EA41CDAB4DA004FC3D8 /* RPSpot.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F66EA31CDAB4DA004FC3D8 /* RPSpot.m */; };
+		74F66EB91CDACC74004FC3D8 /* find_spots_search_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74F66EB11CDACC74004FC3D8 /* find_spots_search_icon@2x.png */; };
+		74F66EBA1CDACC74004FC3D8 /* tab_bar_profile_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74F66EB31CDACC74004FC3D8 /* tab_bar_profile_off@2x.png */; };
+		74F66EBB1CDACC74004FC3D8 /* tab_bar_profile_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74F66EB41CDACC74004FC3D8 /* tab_bar_profile_on@2x.png */; };
+		74F66EBC1CDACC74004FC3D8 /* tab_bar_reservations_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74F66EB51CDACC74004FC3D8 /* tab_bar_reservations_off@2x.png */; };
+		74F66EBD1CDACC74004FC3D8 /* tab_bar_reservations_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74F66EB61CDACC74004FC3D8 /* tab_bar_reservations_on@2x.png */; };
+		74F66EBE1CDACC74004FC3D8 /* tab_bar_search_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74F66EB71CDACC74004FC3D8 /* tab_bar_search_off@2x.png */; };
+		74F66EBF1CDACC74004FC3D8 /* tab_bar_search_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74F66EB81CDACC74004FC3D8 /* tab_bar_search_on@2x.png */; };
+		74F66EC51CDB716C004FC3D8 /* UIViewController+CWPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F66EC41CDB716C004FC3D8 /* UIViewController+CWPopup.m */; };
+		74F66EC91CDB7247004FC3D8 /* RPSpotInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F66EC71CDB7247004FC3D8 /* RPSpotInfoViewController.m */; };
+		74F66ECA1CDB7247004FC3D8 /* RPSpotInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74F66EC81CDB7247004FC3D8 /* RPSpotInfoViewController.xib */; };
+		74F66ECE1CDB7B11004FC3D8 /* RPSpotConfirmationPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F66ECC1CDB7B11004FC3D8 /* RPSpotConfirmationPopupViewController.m */; };
+		74F66ECF1CDB7B11004FC3D8 /* RPSpotConfirmationPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74F66ECD1CDB7B11004FC3D8 /* RPSpotConfirmationPopupViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4C1E30E2F42912794FB99534 /* Pods-RideCellParking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RideCellParking.release.xcconfig"; path = "Pods/Target Support Files/Pods-RideCellParking/Pods-RideCellParking.release.xcconfig"; sourceTree = "<group>"; };
+		5B7FC107D3B90B195E49CBD5 /* Pods-RideCellParking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RideCellParking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RideCellParking/Pods-RideCellParking.debug.xcconfig"; sourceTree = "<group>"; };
+		74F66E5C1CDA5FA2004FC3D8 /* RideCellParking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RideCellParking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		74F66E601CDA5FA2004FC3D8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		74F66E621CDA5FA2004FC3D8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		74F66E631CDA5FA2004FC3D8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		74F66E6C1CDA5FA2004FC3D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		74F66E6E1CDA5FA2004FC3D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		74F66E711CDA5FA2004FC3D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		74F66E731CDA5FA2004FC3D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74F66E7A1CDA7344004FC3D8 /* RideCellParkingAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RideCellParkingAPI.h; sourceTree = "<group>"; };
+		74F66E7B1CDA7344004FC3D8 /* RideCellParkingAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RideCellParkingAPI.m; sourceTree = "<group>"; };
+		74F66E7C1CDA7344004FC3D8 /* RideCellParkingTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RideCellParkingTools.h; sourceTree = "<group>"; };
+		74F66E7D1CDA7344004FC3D8 /* RideCellParkingTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RideCellParkingTools.m; sourceTree = "<group>"; };
+		74F66E831CDA7419004FC3D8 /* RPUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPUser.h; sourceTree = "<group>"; };
+		74F66E841CDA7419004FC3D8 /* RPUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPUser.m; sourceTree = "<group>"; };
+		74F66E951CDAB0EC004FC3D8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		74F66E971CDAB0F5004FC3D8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		74F66E991CDAB286004FC3D8 /* RPFindSpotsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPFindSpotsViewController.h; sourceTree = "<group>"; };
+		74F66E9A1CDAB286004FC3D8 /* RPFindSpotsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPFindSpotsViewController.m; sourceTree = "<group>"; };
+		74F66E9C1CDAB2C8004FC3D8 /* RPReservationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPReservationsViewController.h; sourceTree = "<group>"; };
+		74F66E9D1CDAB2C8004FC3D8 /* RPReservationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPReservationsViewController.m; sourceTree = "<group>"; };
+		74F66E9F1CDAB2D6004FC3D8 /* RPProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPProfileViewController.h; sourceTree = "<group>"; };
+		74F66EA01CDAB2D6004FC3D8 /* RPProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPProfileViewController.m; sourceTree = "<group>"; };
+		74F66EA21CDAB4DA004FC3D8 /* RPSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPSpot.h; sourceTree = "<group>"; };
+		74F66EA31CDAB4DA004FC3D8 /* RPSpot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPSpot.m; sourceTree = "<group>"; };
+		74F66EB11CDACC74004FC3D8 /* find_spots_search_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "find_spots_search_icon@2x.png"; sourceTree = "<group>"; };
+		74F66EB31CDACC74004FC3D8 /* tab_bar_profile_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_bar_profile_off@2x.png"; sourceTree = "<group>"; };
+		74F66EB41CDACC74004FC3D8 /* tab_bar_profile_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_bar_profile_on@2x.png"; sourceTree = "<group>"; };
+		74F66EB51CDACC74004FC3D8 /* tab_bar_reservations_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_bar_reservations_off@2x.png"; sourceTree = "<group>"; };
+		74F66EB61CDACC74004FC3D8 /* tab_bar_reservations_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_bar_reservations_on@2x.png"; sourceTree = "<group>"; };
+		74F66EB71CDACC74004FC3D8 /* tab_bar_search_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_bar_search_off@2x.png"; sourceTree = "<group>"; };
+		74F66EB81CDACC74004FC3D8 /* tab_bar_search_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_bar_search_on@2x.png"; sourceTree = "<group>"; };
+		74F66EC31CDB716C004FC3D8 /* UIViewController+CWPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CWPopup.h"; sourceTree = "<group>"; };
+		74F66EC41CDB716C004FC3D8 /* UIViewController+CWPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CWPopup.m"; sourceTree = "<group>"; };
+		74F66EC61CDB7247004FC3D8 /* RPSpotInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPSpotInfoViewController.h; sourceTree = "<group>"; };
+		74F66EC71CDB7247004FC3D8 /* RPSpotInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPSpotInfoViewController.m; sourceTree = "<group>"; };
+		74F66EC81CDB7247004FC3D8 /* RPSpotInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RPSpotInfoViewController.xib; sourceTree = "<group>"; };
+		74F66ECB1CDB7B11004FC3D8 /* RPSpotConfirmationPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPSpotConfirmationPopupViewController.h; sourceTree = "<group>"; };
+		74F66ECC1CDB7B11004FC3D8 /* RPSpotConfirmationPopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPSpotConfirmationPopupViewController.m; sourceTree = "<group>"; };
+		74F66ECD1CDB7B11004FC3D8 /* RPSpotConfirmationPopupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RPSpotConfirmationPopupViewController.xib; sourceTree = "<group>"; };
+		94DE4B7A56F2ED5925A40FAD /* libPods-RideCellParking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RideCellParking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		74F66E591CDA5FA2004FC3D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74F66E981CDAB0F5004FC3D8 /* MapKit.framework in Frameworks */,
+				74F66E961CDAB0EC004FC3D8 /* CoreLocation.framework in Frameworks */,
+				5BE1CFC0EA48FCA3146FEE6E /* libPods-RideCellParking.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		027F372D920603BA3CA70640 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5B7FC107D3B90B195E49CBD5 /* Pods-RideCellParking.debug.xcconfig */,
+				4C1E30E2F42912794FB99534 /* Pods-RideCellParking.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3A09D88D91BBFDD01CA12898 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74F66E971CDAB0F5004FC3D8 /* MapKit.framework */,
+				74F66E951CDAB0EC004FC3D8 /* CoreLocation.framework */,
+				94DE4B7A56F2ED5925A40FAD /* libPods-RideCellParking.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		74F66E531CDA5FA2004FC3D8 = {
+			isa = PBXGroup;
+			children = (
+				74F66E5E1CDA5FA2004FC3D8 /* RideCellParking */,
+				74F66E5D1CDA5FA2004FC3D8 /* Products */,
+				027F372D920603BA3CA70640 /* Pods */,
+				3A09D88D91BBFDD01CA12898 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		74F66E5D1CDA5FA2004FC3D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				74F66E5C1CDA5FA2004FC3D8 /* RideCellParking.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		74F66E5E1CDA5FA2004FC3D8 /* RideCellParking */ = {
+			isa = PBXGroup;
+			children = (
+				74F66E621CDA5FA2004FC3D8 /* AppDelegate.h */,
+				74F66E631CDA5FA2004FC3D8 /* AppDelegate.m */,
+				74F66E6B1CDA5FA2004FC3D8 /* Main.storyboard */,
+				74F66E791CDA7344004FC3D8 /* RideCellParkingAPI */,
+				74F66E851CDA7419004FC3D8 /* View Controllers */,
+				74F66E861CDA7419004FC3D8 /* Views */,
+				74F66E821CDA7419004FC3D8 /* Model */,
+				74F66E811CDA7419004FC3D8 /* Images */,
+				74F66E6E1CDA5FA2004FC3D8 /* Assets.xcassets */,
+				74F66E701CDA5FA2004FC3D8 /* LaunchScreen.storyboard */,
+				74F66E731CDA5FA2004FC3D8 /* Info.plist */,
+				74F66EC11CDB716C004FC3D8 /* Frameworks */,
+				74F66E5F1CDA5FA2004FC3D8 /* Supporting Files */,
+			);
+			path = RideCellParking;
+			sourceTree = "<group>";
+		};
+		74F66E5F1CDA5FA2004FC3D8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				74F66E601CDA5FA2004FC3D8 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		74F66E791CDA7344004FC3D8 /* RideCellParkingAPI */ = {
+			isa = PBXGroup;
+			children = (
+				74F66E7A1CDA7344004FC3D8 /* RideCellParkingAPI.h */,
+				74F66E7B1CDA7344004FC3D8 /* RideCellParkingAPI.m */,
+				74F66E7C1CDA7344004FC3D8 /* RideCellParkingTools.h */,
+				74F66E7D1CDA7344004FC3D8 /* RideCellParkingTools.m */,
+			);
+			path = RideCellParkingAPI;
+			sourceTree = "<group>";
+		};
+		74F66E811CDA7419004FC3D8 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				74F66EB01CDACC74004FC3D8 /* Find Spots View */,
+				74F66EB21CDACC74004FC3D8 /* Tab Bar */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		74F66E821CDA7419004FC3D8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				74F66E831CDA7419004FC3D8 /* RPUser.h */,
+				74F66E841CDA7419004FC3D8 /* RPUser.m */,
+				74F66EA21CDAB4DA004FC3D8 /* RPSpot.h */,
+				74F66EA31CDAB4DA004FC3D8 /* RPSpot.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		74F66E851CDA7419004FC3D8 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				74F66E991CDAB286004FC3D8 /* RPFindSpotsViewController.h */,
+				74F66E9A1CDAB286004FC3D8 /* RPFindSpotsViewController.m */,
+				74F66E9C1CDAB2C8004FC3D8 /* RPReservationsViewController.h */,
+				74F66E9D1CDAB2C8004FC3D8 /* RPReservationsViewController.m */,
+				74F66E9F1CDAB2D6004FC3D8 /* RPProfileViewController.h */,
+				74F66EA01CDAB2D6004FC3D8 /* RPProfileViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		74F66E861CDA7419004FC3D8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				74F66EC61CDB7247004FC3D8 /* RPSpotInfoViewController.h */,
+				74F66EC71CDB7247004FC3D8 /* RPSpotInfoViewController.m */,
+				74F66EC81CDB7247004FC3D8 /* RPSpotInfoViewController.xib */,
+				74F66ECB1CDB7B11004FC3D8 /* RPSpotConfirmationPopupViewController.h */,
+				74F66ECC1CDB7B11004FC3D8 /* RPSpotConfirmationPopupViewController.m */,
+				74F66ECD1CDB7B11004FC3D8 /* RPSpotConfirmationPopupViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		74F66EB01CDACC74004FC3D8 /* Find Spots View */ = {
+			isa = PBXGroup;
+			children = (
+				74F66EB11CDACC74004FC3D8 /* find_spots_search_icon@2x.png */,
+			);
+			path = "Find Spots View";
+			sourceTree = "<group>";
+		};
+		74F66EB21CDACC74004FC3D8 /* Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				74F66EB31CDACC74004FC3D8 /* tab_bar_profile_off@2x.png */,
+				74F66EB41CDACC74004FC3D8 /* tab_bar_profile_on@2x.png */,
+				74F66EB51CDACC74004FC3D8 /* tab_bar_reservations_off@2x.png */,
+				74F66EB61CDACC74004FC3D8 /* tab_bar_reservations_on@2x.png */,
+				74F66EB71CDACC74004FC3D8 /* tab_bar_search_off@2x.png */,
+				74F66EB81CDACC74004FC3D8 /* tab_bar_search_on@2x.png */,
+			);
+			path = "Tab Bar";
+			sourceTree = "<group>";
+		};
+		74F66EC11CDB716C004FC3D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74F66EC21CDB716C004FC3D8 /* CWPopup */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		74F66EC21CDB716C004FC3D8 /* CWPopup */ = {
+			isa = PBXGroup;
+			children = (
+				74F66EC31CDB716C004FC3D8 /* UIViewController+CWPopup.h */,
+				74F66EC41CDB716C004FC3D8 /* UIViewController+CWPopup.m */,
+			);
+			path = CWPopup;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		74F66E5B1CDA5FA2004FC3D8 /* RideCellParking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74F66E761CDA5FA2004FC3D8 /* Build configuration list for PBXNativeTarget "RideCellParking" */;
+			buildPhases = (
+				B2500AC3801566F5C80DBCA1 /* Check Pods Manifest.lock */,
+				74F66E581CDA5FA2004FC3D8 /* Sources */,
+				74F66E591CDA5FA2004FC3D8 /* Frameworks */,
+				74F66E5A1CDA5FA2004FC3D8 /* Resources */,
+				E125D9A1E9178E3C0082D9D0 /* Embed Pods Frameworks */,
+				758F227C4F9D1BE509ACBFE2 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RideCellParking;
+			productName = RideCellParking;
+			productReference = 74F66E5C1CDA5FA2004FC3D8 /* RideCellParking.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		74F66E541CDA5FA2004FC3D8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = RideCell;
+				TargetAttributes = {
+					74F66E5B1CDA5FA2004FC3D8 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 74F66E571CDA5FA2004FC3D8 /* Build configuration list for PBXProject "RideCellParking" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 74F66E531CDA5FA2004FC3D8;
+			productRefGroup = 74F66E5D1CDA5FA2004FC3D8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				74F66E5B1CDA5FA2004FC3D8 /* RideCellParking */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		74F66E5A1CDA5FA2004FC3D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74F66ECA1CDB7247004FC3D8 /* RPSpotInfoViewController.xib in Resources */,
+				74F66EBF1CDACC74004FC3D8 /* tab_bar_search_on@2x.png in Resources */,
+				74F66EB91CDACC74004FC3D8 /* find_spots_search_icon@2x.png in Resources */,
+				74F66EBA1CDACC74004FC3D8 /* tab_bar_profile_off@2x.png in Resources */,
+				74F66EBD1CDACC74004FC3D8 /* tab_bar_reservations_on@2x.png in Resources */,
+				74F66EBE1CDACC74004FC3D8 /* tab_bar_search_off@2x.png in Resources */,
+				74F66ECF1CDB7B11004FC3D8 /* RPSpotConfirmationPopupViewController.xib in Resources */,
+				74F66EBB1CDACC74004FC3D8 /* tab_bar_profile_on@2x.png in Resources */,
+				74F66E721CDA5FA2004FC3D8 /* LaunchScreen.storyboard in Resources */,
+				74F66EBC1CDACC74004FC3D8 /* tab_bar_reservations_off@2x.png in Resources */,
+				74F66E6F1CDA5FA2004FC3D8 /* Assets.xcassets in Resources */,
+				74F66E6D1CDA5FA2004FC3D8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		758F227C4F9D1BE509ACBFE2 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RideCellParking/Pods-RideCellParking-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2500AC3801566F5C80DBCA1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E125D9A1E9178E3C0082D9D0 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RideCellParking/Pods-RideCellParking-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		74F66E581CDA5FA2004FC3D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74F66EA41CDAB4DA004FC3D8 /* RPSpot.m in Sources */,
+				74F66E871CDA7419004FC3D8 /* RPUser.m in Sources */,
+				74F66E9E1CDAB2C8004FC3D8 /* RPReservationsViewController.m in Sources */,
+				74F66E9B1CDAB286004FC3D8 /* RPFindSpotsViewController.m in Sources */,
+				74F66EC91CDB7247004FC3D8 /* RPSpotInfoViewController.m in Sources */,
+				74F66E7E1CDA7344004FC3D8 /* RideCellParkingAPI.m in Sources */,
+				74F66E641CDA5FA2004FC3D8 /* AppDelegate.m in Sources */,
+				74F66E7F1CDA7344004FC3D8 /* RideCellParkingTools.m in Sources */,
+				74F66EA11CDAB2D6004FC3D8 /* RPProfileViewController.m in Sources */,
+				74F66EC51CDB716C004FC3D8 /* UIViewController+CWPopup.m in Sources */,
+				74F66ECE1CDB7B11004FC3D8 /* RPSpotConfirmationPopupViewController.m in Sources */,
+				74F66E611CDA5FA2004FC3D8 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		74F66E6B1CDA5FA2004FC3D8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74F66E6C1CDA5FA2004FC3D8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		74F66E701CDA5FA2004FC3D8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74F66E711CDA5FA2004FC3D8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		74F66E741CDA5FA2004FC3D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		74F66E751CDA5FA2004FC3D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		74F66E771CDA5FA2004FC3D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B7FC107D3B90B195E49CBD5 /* Pods-RideCellParking.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RideCellParking/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ridecell.RideCellParking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		74F66E781CDA5FA2004FC3D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C1E30E2F42912794FB99534 /* Pods-RideCellParking.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RideCellParking/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ridecell.RideCellParking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		74F66E571CDA5FA2004FC3D8 /* Build configuration list for PBXProject "RideCellParking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74F66E741CDA5FA2004FC3D8 /* Debug */,
+				74F66E751CDA5FA2004FC3D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74F66E761CDA5FA2004FC3D8 /* Build configuration list for PBXNativeTarget "RideCellParking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74F66E771CDA5FA2004FC3D8 /* Debug */,
+				74F66E781CDA5FA2004FC3D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 74F66E541CDA5FA2004FC3D8 /* Project object */;
+}
