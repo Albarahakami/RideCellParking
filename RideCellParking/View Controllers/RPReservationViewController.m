@@ -1,3 +1,4 @@
+
 //
 //  RPReservationsViewController.m
 //  RideCellParking
@@ -6,13 +7,13 @@
 //  Copyright © 2016 RideCell. All rights reserved.
 //
 
-#import "RPReservationsViewController.h"
+#import "RPReservationViewController.h"
 
-@interface RPReservationsViewController ()
+@interface RPReservationViewController ()
 
 @end
 
-@implementation RPReservationsViewController
+@implementation RPReservationViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,5 +34,11 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)payClicked:(id)sender {
+}
+
+- (IBAction)slideValueChanged:(id)sender {
+}
 
 @end

@@ -18,7 +18,7 @@
 		74F66E961CDAB0EC004FC3D8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F66E951CDAB0EC004FC3D8 /* CoreLocation.framework */; };
 		74F66E981CDAB0F5004FC3D8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F66E971CDAB0F5004FC3D8 /* MapKit.framework */; };
 		74F66E9B1CDAB286004FC3D8 /* RPFindSpotsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F66E9A1CDAB286004FC3D8 /* RPFindSpotsViewController.m */; };
-		74F66E9E1CDAB2C8004FC3D8 /* RPReservationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F66E9D1CDAB2C8004FC3D8 /* RPReservationsViewController.m */; };
+		74F66E9E1CDAB2C8004FC3D8 /* RPReservationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F66E9D1CDAB2C8004FC3D8 /* RPReservationViewController.m */; };
 		74F66EA11CDAB2D6004FC3D8 /* RPProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F66EA01CDAB2D6004FC3D8 /* RPProfileViewController.m */; };
 		74F66EA41CDAB4DA004FC3D8 /* RPSpot.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F66EA31CDAB4DA004FC3D8 /* RPSpot.m */; };
 		74F66EB91CDACC74004FC3D8 /* find_spots_search_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74F66EB11CDACC74004FC3D8 /* find_spots_search_icon@2x.png */; };
@@ -33,6 +33,7 @@
 		74F66ECA1CDB7247004FC3D8 /* RPSpotInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74F66EC81CDB7247004FC3D8 /* RPSpotInfoViewController.xib */; };
 		74F66ECE1CDB7B11004FC3D8 /* RPSpotConfirmationPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F66ECC1CDB7B11004FC3D8 /* RPSpotConfirmationPopupViewController.m */; };
 		74F66ECF1CDB7B11004FC3D8 /* RPSpotConfirmationPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74F66ECD1CDB7B11004FC3D8 /* RPSpotConfirmationPopupViewController.xib */; };
+		74F66ED21CDB832D004FC3D8 /* reservation_header.png in Resources */ = {isa = PBXBuildFile; fileRef = 74F66ED11CDB832D004FC3D8 /* reservation_header.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,8 +55,8 @@
 		74F66E971CDAB0F5004FC3D8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		74F66E991CDAB286004FC3D8 /* RPFindSpotsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPFindSpotsViewController.h; sourceTree = "<group>"; };
 		74F66E9A1CDAB286004FC3D8 /* RPFindSpotsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPFindSpotsViewController.m; sourceTree = "<group>"; };
-		74F66E9C1CDAB2C8004FC3D8 /* RPReservationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPReservationsViewController.h; sourceTree = "<group>"; };
-		74F66E9D1CDAB2C8004FC3D8 /* RPReservationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPReservationsViewController.m; sourceTree = "<group>"; };
+		74F66E9C1CDAB2C8004FC3D8 /* RPReservationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPReservationViewController.h; sourceTree = "<group>"; };
+		74F66E9D1CDAB2C8004FC3D8 /* RPReservationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPReservationViewController.m; sourceTree = "<group>"; };
 		74F66E9F1CDAB2D6004FC3D8 /* RPProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPProfileViewController.h; sourceTree = "<group>"; };
 		74F66EA01CDAB2D6004FC3D8 /* RPProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPProfileViewController.m; sourceTree = "<group>"; };
 		74F66EA21CDAB4DA004FC3D8 /* RPSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPSpot.h; sourceTree = "<group>"; };
@@ -75,6 +76,7 @@
 		74F66ECB1CDB7B11004FC3D8 /* RPSpotConfirmationPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPSpotConfirmationPopupViewController.h; sourceTree = "<group>"; };
 		74F66ECC1CDB7B11004FC3D8 /* RPSpotConfirmationPopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPSpotConfirmationPopupViewController.m; sourceTree = "<group>"; };
 		74F66ECD1CDB7B11004FC3D8 /* RPSpotConfirmationPopupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RPSpotConfirmationPopupViewController.xib; sourceTree = "<group>"; };
+		74F66ED11CDB832D004FC3D8 /* reservation_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reservation_header.png; sourceTree = "<group>"; };
 		94DE4B7A56F2ED5925A40FAD /* libPods-RideCellParking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RideCellParking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -169,6 +171,7 @@
 		74F66E811CDA7419004FC3D8 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				74F66ED01CDB832D004FC3D8 /* Reservation View */,
 				74F66EB01CDACC74004FC3D8 /* Find Spots View */,
 				74F66EB21CDACC74004FC3D8 /* Tab Bar */,
 			);
@@ -191,8 +194,8 @@
 			children = (
 				74F66E991CDAB286004FC3D8 /* RPFindSpotsViewController.h */,
 				74F66E9A1CDAB286004FC3D8 /* RPFindSpotsViewController.m */,
-				74F66E9C1CDAB2C8004FC3D8 /* RPReservationsViewController.h */,
-				74F66E9D1CDAB2C8004FC3D8 /* RPReservationsViewController.m */,
+				74F66E9C1CDAB2C8004FC3D8 /* RPReservationViewController.h */,
+				74F66E9D1CDAB2C8004FC3D8 /* RPReservationViewController.m */,
 				74F66E9F1CDAB2D6004FC3D8 /* RPProfileViewController.h */,
 				74F66EA01CDAB2D6004FC3D8 /* RPProfileViewController.m */,
 			);
@@ -248,6 +251,14 @@
 				74F66EC41CDB716C004FC3D8 /* UIViewController+CWPopup.m */,
 			);
 			path = CWPopup;
+			sourceTree = "<group>";
+		};
+		74F66ED01CDB832D004FC3D8 /* Reservation View */ = {
+			isa = PBXGroup;
+			children = (
+				74F66ED11CDB832D004FC3D8 /* reservation_header.png */,
+			);
+			path = "Reservation View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74F66ECA1CDB7247004FC3D8 /* RPSpotInfoViewController.xib in Resources */,
+				74F66ED21CDB832D004FC3D8 /* reservation_header.png in Resources */,
 				74F66EBF1CDACC74004FC3D8 /* tab_bar_search_on@2x.png in Resources */,
 				74F66EB91CDACC74004FC3D8 /* find_spots_search_icon@2x.png in Resources */,
 				74F66EBA1CDACC74004FC3D8 /* tab_bar_profile_off@2x.png in Resources */,
@@ -382,7 +394,7 @@
 			files = (
 				74F66EA41CDAB4DA004FC3D8 /* RPSpot.m in Sources */,
 				74F66E871CDA7419004FC3D8 /* RPUser.m in Sources */,
-				74F66E9E1CDAB2C8004FC3D8 /* RPReservationsViewController.m in Sources */,
+				74F66E9E1CDAB2C8004FC3D8 /* RPReservationViewController.m in Sources */,
 				74F66E9B1CDAB286004FC3D8 /* RPFindSpotsViewController.m in Sources */,
 				74F66EC91CDB7247004FC3D8 /* RPSpotInfoViewController.m in Sources */,
 				74F66E7E1CDA7344004FC3D8 /* RideCellParkingAPI.m in Sources */,
