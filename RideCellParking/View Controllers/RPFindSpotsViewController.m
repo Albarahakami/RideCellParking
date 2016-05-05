@@ -35,6 +35,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // init the callout to be reused
+    
     infoViewController = [[RPSpotInfoViewController alloc]
                           initWithNibName:@"RPSpotInfoViewController"
                           bundle:nil];
@@ -42,8 +44,13 @@
     
     spots = [[NSMutableArray alloc] init];
     
+    // we start with the view pulled down
+    
     isSearchViewPulledDown = YES;
     
+    
+    // this should be the user location by using the CLLocation class and request access and adding the NSLocationWhenInUseUsageDescription value in the info.plist file
+    // but just for the sake of simplicity we assume the user is at this location
     
     [self.myMapView.camera setCenterCoordinate:CLLocationCoordinate2DMake(37.781471, -122.460083)];
     [self.myMapView.camera setAltitude:5500];
@@ -71,6 +78,8 @@
 
 - (void) refreshResults {
     
+    // everytime we refresh we wanna give the user a feedback that something is happening, I'm using an HUD here
+    
     [ProgressHUD show:@"Searching.."];
     
     [_myMapView removeAnnotations:_myMapView.annotations];
@@ -83,6 +92,8 @@
                                         
                                         [ProgressHUD dismiss];
                                         
+                                        // loop through the results and add the pins one by one to the map
+                                        
                                         for (int i = 0; i < ((NSArray*)result).count; i++) {
                                             
                                             RPSpot *spot = [[RPSpot alloc] initWithData:result[i]];
@@ -91,6 +102,8 @@
                                             MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
                                             [annotation setCoordinate:CLLocationCoordinate2DMake(spot.lat, spot.lng)];
                                             [self.myMapView addAnnotation:annotation];
+                                            
+                                            // to make sure the user sees at lease one pin, in case the user was zoomed in to a level where there are no pins
                                             
                                             if (i == 0) {
                                                 
@@ -101,7 +114,7 @@
                                             
                                         }
                                         
-                                        
+                                        // to handle the redo seach and the other UI complonents on the first launch
                                         didSearchFirstTime = YES;
                                         
                                         
@@ -117,6 +130,8 @@
 
 
 - (void) toggleSearchView {
+    
+    // toggles the top search view
     
     if (isSearchViewPulledDown) {
         
@@ -152,6 +167,7 @@
 - (void) showSearchView {
     
     isSearchViewPulledDown = YES;
+    // we wanna hide the redo button if the user moved the map then pulled the search view again to change a search parameter
     [_redoSearchButton setHidden:YES];
     
     [UIView animateWithDuration:0.3
@@ -168,6 +184,8 @@
 
 
 - (void) reserveSpot:(RPSpot*)spot {
+    
+    // save the spot to the user defaults, we could CoreData and add all the history, but i'm using this to simplify stuff for the test project
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
@@ -198,11 +216,15 @@
 - (void)mapView:(MKMapView *)mapView
 didSelectAnnotationView:(MKAnnotationView *)view {
     
+    // we move the focus to the selected pin to show its view
+    
     [self.myMapView.camera setCenterCoordinate:view.annotation.coordinate];
     [self.myMapView.camera setAltitude:1500];
     
     
     for (int i = 0; i < spots.count; i++) {
+        
+        // this loop searches for the spot object related to the selected pin, we could also subclass and add spot to the class as an object and access it right away without a loop
         
         if (view.annotation.coordinate.latitude == ((RPSpot*)spots[i]).lat
             && view.annotation.coordinate.longitude == ((RPSpot*)spots[i]).lng) {
@@ -223,7 +245,8 @@ didSelectAnnotationView:(MKAnnotationView *)view {
         }
         
     }
-
+    
+    // the delegate method alters these when map moves, so we wanna make sure they are there if it does
     
     [_redoSearchButton setHidden:YES];
     [infoViewController.view setHidden:NO];
@@ -305,6 +328,17 @@ regionWillChangeAnimated:(BOOL)animated {
 - (void)infoClickedForSpot:(RPSpot *)spot {
     
     [infoViewController.view setHidden:YES];
+    
+    // we have access to the spot object, we can do whatever with it, i'm just displaying the name here
+    
+    UIAlertController *alrt = [UIAlertController alertControllerWithTitle:spot.name
+                                                                  message:@"Blah blah blah"
+                                                           preferredStyle:UIAlertControllerStyleAlert];
+    [alrt addAction:[UIAlertAction actionWithTitle:@"Okay"
+                                             style:UIAlertActionStyleCancel
+                                           handler:nil]];
+    
+    [self presentViewController:alrt animated:YES completion:nil];
     
 }
 

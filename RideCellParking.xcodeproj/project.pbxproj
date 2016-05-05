@@ -19,7 +19,6 @@
 		74F66E981CDAB0F5004FC3D8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F66E971CDAB0F5004FC3D8 /* MapKit.framework */; };
 		74F66E9B1CDAB286004FC3D8 /* RPFindSpotsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F66E9A1CDAB286004FC3D8 /* RPFindSpotsViewController.m */; };
 		74F66E9E1CDAB2C8004FC3D8 /* RPReservationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F66E9D1CDAB2C8004FC3D8 /* RPReservationViewController.m */; };
-		74F66EA11CDAB2D6004FC3D8 /* RPProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F66EA01CDAB2D6004FC3D8 /* RPProfileViewController.m */; };
 		74F66EA41CDAB4DA004FC3D8 /* RPSpot.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F66EA31CDAB4DA004FC3D8 /* RPSpot.m */; };
 		74F66EB91CDACC74004FC3D8 /* find_spots_search_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74F66EB11CDACC74004FC3D8 /* find_spots_search_icon@2x.png */; };
 		74F66EBA1CDACC74004FC3D8 /* tab_bar_profile_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74F66EB31CDACC74004FC3D8 /* tab_bar_profile_off@2x.png */; };
@@ -36,6 +35,7 @@
 		74F66ED21CDB832D004FC3D8 /* reservation_header.png in Resources */ = {isa = PBXBuildFile; fileRef = 74F66ED11CDB832D004FC3D8 /* reservation_header.png */; };
 		74F66ED71CDB8B98004FC3D8 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 74F66ED41CDB8B98004FC3D8 /* ProgressHUD.bundle */; };
 		74F66ED81CDB8B98004FC3D8 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F66ED61CDB8B98004FC3D8 /* ProgressHUD.m */; };
+		74F66EDB1CDBA1DD004FC3D8 /* RPProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F66EDA1CDBA1DD004FC3D8 /* RPProfileTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,8 +59,6 @@
 		74F66E9A1CDAB286004FC3D8 /* RPFindSpotsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPFindSpotsViewController.m; sourceTree = "<group>"; };
 		74F66E9C1CDAB2C8004FC3D8 /* RPReservationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPReservationViewController.h; sourceTree = "<group>"; };
 		74F66E9D1CDAB2C8004FC3D8 /* RPReservationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPReservationViewController.m; sourceTree = "<group>"; };
-		74F66E9F1CDAB2D6004FC3D8 /* RPProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPProfileViewController.h; sourceTree = "<group>"; };
-		74F66EA01CDAB2D6004FC3D8 /* RPProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPProfileViewController.m; sourceTree = "<group>"; };
 		74F66EA21CDAB4DA004FC3D8 /* RPSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPSpot.h; sourceTree = "<group>"; };
 		74F66EA31CDAB4DA004FC3D8 /* RPSpot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPSpot.m; sourceTree = "<group>"; };
 		74F66EB11CDACC74004FC3D8 /* find_spots_search_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "find_spots_search_icon@2x.png"; sourceTree = "<group>"; };
@@ -82,6 +80,8 @@
 		74F66ED41CDB8B98004FC3D8 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
 		74F66ED51CDB8B98004FC3D8 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
 		74F66ED61CDB8B98004FC3D8 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
+		74F66ED91CDBA1DD004FC3D8 /* RPProfileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPProfileTableViewController.h; sourceTree = "<group>"; };
+		74F66EDA1CDBA1DD004FC3D8 /* RPProfileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPProfileTableViewController.m; sourceTree = "<group>"; };
 		94DE4B7A56F2ED5925A40FAD /* libPods-RideCellParking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RideCellParking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -201,8 +201,8 @@
 				74F66E9A1CDAB286004FC3D8 /* RPFindSpotsViewController.m */,
 				74F66E9C1CDAB2C8004FC3D8 /* RPReservationViewController.h */,
 				74F66E9D1CDAB2C8004FC3D8 /* RPReservationViewController.m */,
-				74F66E9F1CDAB2D6004FC3D8 /* RPProfileViewController.h */,
-				74F66EA01CDAB2D6004FC3D8 /* RPProfileViewController.m */,
+				74F66ED91CDBA1DD004FC3D8 /* RPProfileTableViewController.h */,
+				74F66EDA1CDBA1DD004FC3D8 /* RPProfileTableViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -412,12 +412,12 @@
 				74F66EA41CDAB4DA004FC3D8 /* RPSpot.m in Sources */,
 				74F66E871CDA7419004FC3D8 /* RPUser.m in Sources */,
 				74F66E9E1CDAB2C8004FC3D8 /* RPReservationViewController.m in Sources */,
+				74F66EDB1CDBA1DD004FC3D8 /* RPProfileTableViewController.m in Sources */,
 				74F66E9B1CDAB286004FC3D8 /* RPFindSpotsViewController.m in Sources */,
 				74F66EC91CDB7247004FC3D8 /* RPSpotInfoViewController.m in Sources */,
 				74F66E7E1CDA7344004FC3D8 /* RideCellParkingAPI.m in Sources */,
 				74F66ED81CDB8B98004FC3D8 /* ProgressHUD.m in Sources */,
 				74F66E641CDA5FA2004FC3D8 /* AppDelegate.m in Sources */,
-				74F66EA11CDAB2D6004FC3D8 /* RPProfileViewController.m in Sources */,
 				74F66EC51CDB716C004FC3D8 /* UIViewController+CWPopup.m in Sources */,
 				74F66ECE1CDB7B11004FC3D8 /* RPSpotConfirmationPopupViewController.m in Sources */,
 				74F66E611CDA5FA2004FC3D8 /* main.m in Sources */,

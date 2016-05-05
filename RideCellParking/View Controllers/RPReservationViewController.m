@@ -10,8 +10,10 @@
 #import "RPReservationViewController.h"
 #import "NSUserDefaults+RMSaveCustomObject.h"
 #import "RPSpot.h"
+#import "RPSpotConfirmationPopupViewController.h"
+#import "UIViewController+CWPopup.h"
 
-@interface RPReservationViewController () {
+@interface RPReservationViewController () <RPSpotConfirmationPopupDelegate> {
     
     RPSpot *spot;
     NSTimer *timeLeftTimer;
@@ -38,6 +40,8 @@
     
     reservationData = [defaults rm_customObjectForKey:@"last_reservation"];
     
+    // check if we have already made a reservation in the past
+    
     if (reservationData) {
         
         [_myTableView setHidden:NO];
@@ -54,6 +58,8 @@
                                                         repeats:YES];
         
     }
+    
+    // if not we show the no reservation message by hiding the table view (its behind it hehe)
     else {
         
         [_myTableView setHidden:YES];
@@ -66,6 +72,7 @@
 
 - (void) viewWillDisappear:(BOOL)animated {
     
+    // stop the timer so we don't consume resources
     [super viewWillDisappear:animated];
     [timeLeftTimer invalidate];
     timeLeftTimer = nil;
@@ -87,10 +94,8 @@
     
     NSTimeInterval difference = [expirationDate timeIntervalSinceDate:[NSDate date]];
     
-//    if (difference > 120) {
-//        difference = 0;
-//    }
-    
+    // this is to check if the reservation has expired or not
+    // If expired, show the lastest reservation details and give the option to reserve
     if (difference <= 0) {
         
         [timeLeftTimer invalidate];
@@ -102,6 +107,7 @@
         [_payButton setTitle:@"Pay & Reserve" forState:UIControlStateNormal];
         
     }
+    // If not , show the current reservation details and give the option to extend
     else {
         
         [_timeLeftTitleLabel setText:@"Time left"];
@@ -117,21 +123,27 @@
 
 - (void) reserveSpot {
     
+    // getting the user defaults to save the reservation disctionary
+    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
-    
+    // this is to check if the reservation has expired or not
     
     NSDate *reservationDate = [reservationData objectForKey:@"reservation_date"];
     NSDate* expirationDate = [reservationDate dateByAddingTimeInterval:[[reservationData objectForKey:@"reservation_duration"] floatValue]*60.0];
     
     NSTimeInterval difference = [expirationDate timeIntervalSinceDate:[NSDate date]];
     
+    // if less than 0 that means it has expired so we want to reserve with the new specified period
     if (difference <= 0) {
         
         [reservationData setObject:_extentionTimeLabel.text forKey:@"reservation_duration"];
         
     }
+    
+    // else we wanna add to our current period
     else {
+        
         
         float newDuration = [_extentionTimeLabel.text floatValue] + (difference/60.0);
         
@@ -139,8 +151,9 @@
         
     }
     
+    // if you wanna test the last minute of the timer please uncomment this and click pay
+//    [reservationData setObject:@"1" forKey:@"reservation_duration"];
     
-    [reservationData setObject:@"1" forKey:@"reservation_duration"];
     
     [reservationData setObject:[NSDate date] forKey:@"reservation_date"];
     
@@ -149,6 +162,7 @@
     
     [defaults synchronize];
     
+    // to update the UI
     
     [self timerFired];
     [timeLeftTimer invalidate];
@@ -168,15 +182,47 @@
     
     [self reserveSpot];
     
+    RPSpotConfirmationPopupViewController *confirmationViewController = [[RPSpotConfirmationPopupViewController alloc]
+                                                                         initWithNibName:@"RPSpotConfirmationPopupViewController"
+                                                                         bundle:nil];
+    confirmationViewController.delegate = self;
+    
+    [confirmationViewController setSpot:spot];
+    
+    [self presentPopupViewController:confirmationViewController
+                            animated:YES
+                          completion:nil];
+    
 }
 
 - (IBAction)slideValueChanged:(id)sender {
     
     UISlider *slider = (UISlider*)sender;
     
+    // updating the UI with the slider data
+    
     [_extentionTimeLabel setText:[NSString stringWithFormat:@"%.0f", slider.value]];
     
     [_totalLabel setText:[NSString stringWithFormat:@"%.2f", slider.value*([spot.cost_per_minute floatValue])]];
+}
+
+
+#pragma mark RPSpotConfirmationPopupDelegate
+
+
+- (void)viewReservationClickedForSpot:(RPSpot *)spot {
+    
+    [self dismissPopupViewControllerAnimated:YES
+                                  completion:nil];
+    
+}
+
+
+- (void)dismissClicked {
+    
+    [self dismissPopupViewControllerAnimated:YES
+                                  completion:nil];
+    
 }
 
 @end
