@@ -12,6 +12,7 @@
 #import "RPSpot.h"
 #import "RPSpotConfirmationPopupViewController.h"
 #import "UIViewController+CWPopup.h"
+#import "RideCellParkingAPI.h"
 
 @interface RPReservationViewController () <RPSpotConfirmationPopupDelegate> {
     
@@ -172,6 +173,12 @@
                                                    selector:@selector(timerFired)
                                                    userInfo:nil
                                                     repeats:YES];
+    
+    
+    [RideCellParkingAPI reserveSpot:spot.spot_id
+                            minutes:[reservationData objectForKey:@"reservation_duration"]
+                            success:nil
+                            failure:nil];
     
 }
 

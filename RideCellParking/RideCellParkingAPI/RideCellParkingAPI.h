@@ -20,4 +20,9 @@
                     failure:(void (^)(NSError * error ))failure;
 
 
++ (void)reserveSpot:(NSString*)spot_id
+            minutes:(NSString*)minutes
+            success:(void (^)(id result))success
+            failure:(void (^)(NSError * error ))failure;
+
 @end

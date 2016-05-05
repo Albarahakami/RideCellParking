@@ -197,6 +197,12 @@
     [defaults rm_setCustomObject:reservationData forKey:@"last_reservation"];
     [defaults synchronize];
     
+    
+    [RideCellParkingAPI reserveSpot:spot.spot_id
+                            minutes:_totalTimeLabel.text
+                            success:nil
+                            failure:nil];
+    
 }
 
 #pragma mark MKMapViewDelegate

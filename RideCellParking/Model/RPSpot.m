@@ -16,7 +16,7 @@
     self = [super init];
     if (self) {
         
-        _spot_id = [data objectForKey:@"id"];
+        _spot_id = [[data objectForKey:@"id"] stringValue];
         _cost_per_minute = [data objectForKey:@"cost_per_minute"];
         _name = [data objectForKey:@"name"];
         _reserved_until = [data objectForKey:@"reserved_until"];

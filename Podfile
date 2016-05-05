@@ -5,12 +5,8 @@
 
 target 'RideCellParking' do
 
-
 pod 'AFNetworking', '~>2.5'
 pod 'RMMapper', '~> 1.1'
-pod 'Fabric'
-pod 'Crashlytics'
-
 
 end
 
