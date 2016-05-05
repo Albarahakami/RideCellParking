@@ -13,6 +13,7 @@
 #import "UIViewController+CWPopup.h"
 #import "ProgressHUD.h"
 #import "RPSpot.h"
+#import "NSUserDefaults+RMSaveCustomObject.h"
 
 #define SEARCH_VIEW_VISIBLE_AREA_HIEGHT 25
 
@@ -34,7 +35,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
     infoViewController = [[RPSpotInfoViewController alloc]
                           initWithNibName:@"RPSpotInfoViewController"
                           bundle:nil];
@@ -47,6 +47,14 @@
     
     [self.myMapView.camera setCenterCoordinate:CLLocationCoordinate2DMake(37.781471, -122.460083)];
     [self.myMapView.camera setAltitude:5500];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+    [self.tabBarController setTitle:@"Find"];
     
 }
 
@@ -159,6 +167,20 @@
 }
 
 
+- (void) reserveSpot:(RPSpot*)spot {
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    NSMutableDictionary *reservationData = [[NSMutableDictionary alloc] init];
+    [reservationData setObject:spot forKey:@"spot"];
+    [reservationData setObject:[NSDate date] forKey:@"reservation_date"];
+    [reservationData setObject:_totalTimeLabel.text forKey:@"reservation_duration"];
+    
+    [defaults rm_setCustomObject:reservationData forKey:@"last_reservation"];
+    [defaults synchronize];
+    
+}
+
 #pragma mark MKMapViewDelegate
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView
@@ -178,7 +200,6 @@ didSelectAnnotationView:(MKAnnotationView *)view {
     
     [self.myMapView.camera setCenterCoordinate:view.annotation.coordinate];
     [self.myMapView.camera setAltitude:1500];
-    
     
     
     for (int i = 0; i < spots.count; i++) {
@@ -246,7 +267,7 @@ regionWillChangeAnimated:(BOOL)animated {
     
     UISlider *slider = (UISlider*)sender;
     
-    [_totalTimeLabel setText:[NSString stringWithFormat:@"%.0f min", slider.value]];
+    [_totalTimeLabel setText:[NSString stringWithFormat:@"%.0f", slider.value]];
     
 }
 
@@ -263,6 +284,8 @@ regionWillChangeAnimated:(BOOL)animated {
 #pragma mark SpotInfoPopupDelegate
 
 - (void)payClickedForSpot:(RPSpot *)spot {
+    
+    [self reserveSpot:spot];
     
     [infoViewController.view setHidden:YES];
     
@@ -293,6 +316,8 @@ regionWillChangeAnimated:(BOOL)animated {
     
     [self dismissPopupViewControllerAnimated:YES
                                   completion:nil];
+    
+    [self.tabBarController setSelectedIndex:1];
     
 }
 

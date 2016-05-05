@@ -50,6 +50,7 @@
     [defaults removeObjectForKey:@"related"];
     [defaults removeObjectForKey:@"data"];
     [defaults removeObjectForKey:@"userData"];
+    [defaults removeObjectForKey:@"last_reservation"];
     [defaults synchronize];
     
 }

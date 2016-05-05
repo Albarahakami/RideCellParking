@@ -30,6 +30,9 @@
     _spot = spot;
     
     [_nameLabel setText:spot.name];
+    [_costLabel setText:[NSString stringWithFormat:@"%@/min", spot.cost_per_minute]];
+    [_distanceLabel setText:@".5 miles"];
+    [_openSpotsLabel setText:@"2 spots"];
     
 }
 

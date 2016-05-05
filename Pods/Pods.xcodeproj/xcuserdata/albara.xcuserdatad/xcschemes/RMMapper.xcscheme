@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'C6FA6198F11EB1A11A7AF661'
+               BlueprintIdentifier = '2519BDC1E80D637CD0876BEE'
                BlueprintName = 'RMMapper'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libRMMapper.a'>
